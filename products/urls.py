@@ -3,6 +3,6 @@ from products.views import products
 
 app_name = 'products'
 
-urllpaterns = [
+urlpatterns = [
     path('', products, name='index'),
 ]
