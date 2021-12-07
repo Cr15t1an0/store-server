@@ -1,5 +1,8 @@
 from django.urls import path
-from views import index
+from products.views import products
+
+app_name = 'products'
 
 urllpaterns = [
+    path('', products, name='index'),
 ]
