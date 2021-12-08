@@ -4,7 +4,7 @@ from users.forms import UserLoginForm
 from django.urls import reverse
 
 def login(request):
-    if request.method == 'Post':
+    if request.method == 'POST':
         form = UserLoginForm(data=request.POST)
         if form.is_valid():
             username = request.POST['username']
