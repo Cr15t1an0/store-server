@@ -12,9 +12,9 @@ def login(request):
             user = auth.authenticate(username=username, password=password)
             if user and user.is_active:
                 auth.login(request, user)
-                return HttpResponseRedirect(reverse('reverse'))
-
-    form = UserLoginForm()
+                return HttpResponseRedirect(reverse('index'))
+    else:
+        form = UserLoginForm()
     context = {'form': form}
     return render(request, 'users/login.html', context)
 
